@@ -98,9 +98,9 @@ Based in Swan Hill, Australia, I'm passionate about building intelligent systems
 ## 📫 Contact
 
 - **Email**: [lenn.dev.oo@gmail.com](mailto:lenn.dev.oo@gmail.com)
-- **Phone**: +61 429 108 670
-- **Location**: Swan Hill, Australia
+- **Location**: Melbourn, VIC
 - **GitHub**: [github.com/lenn-dev](https://github.com/lenn-dev)
+- **Linkedin**: [https://www.linkedin.com/in/lenn-dev/](https://www.linkedin.com/in/lenn-dev/)
 
 ---
 
