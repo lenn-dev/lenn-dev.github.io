@@ -1,3 +1,127 @@
+/* 1. 외부 폰트 및 기본 설정 */
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+}
+
+/* 2. 헤더 및 네비게이션 */
+.masthead {
+  background: #ffffff !important;
+  border-bottom: 1px solid #eee;
+  box-shadow: none !important;
+}
+
 .site-title {
-  text-shadow: 3px 3px 4px rgba(0,0,0,0.8);
-  font-size
+  color: #1a1a1a !important;
+  font-size: 2.0rem !important;
+  font-weight: 800;
+}
+
+.site-nav { background: #ffffff !important; }
+.nav__list .nav__item a { color: #444 !important; font-weight: 600; }
+.nav__item a:hover { color: #667eea !important; background: transparent !important; }
+
+/* 3. 전체적인 그리드 배치 (핵심 수정: 2열 배치) */
+.archive__grid {
+  display: grid;
+  /* 화면이 넓을 때는 1:1 비율로 두 개씩, 좁을 때는 한 개씩 */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important;
+  grid-column-gap: 30px !important;
+  grid-row-gap: 30px !important;
+  max-width: 1200px;
+  margin: 40px auto !important; /* 중앙 정렬 및 상하 여백 */
+}
+
+/* 4. 포스트/프로젝트 카드 공통 스타일 */
+.archive__item, .feature__item, .project-card {
+  background: #ffffff !important;
+  border: 1px solid #f0f0f0 !important;
+  border-radius: 20px !important; /* 조금 더 둥글게 조절 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  padding: 30px; /* 내부 여백 확대 */
+  transition: all 0.3s ease !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 카드 높이 통일 */
+}
+
+.archive__item:hover, .project-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+  border-color: #e0e0e0 !important;
+}
+
+/* 5. 카드 내부 상세 요소 (참고 사이트 스타일) */
+
+/* 제목 위 강조 태그 (빨간색) */
+.card-tag, .tag--red {
+  background-color: #ff4d4f !important;
+  color: white !important;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.archive__item-title {
+  margin-top: 10px !important;
+  font-weight: 800;
+  color: #1a1a1a !important;
+  font-size: 1.4rem !important;
+  line-height: 1.4;
+}
+
+/* 사용 기술 스택 (연한 노란색 칩) */
+.card-skills, .archive__item-skills {
+  margin-top: auto; /* 하단 고정 */
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card-skills span, .skill-chip {
+  background-color: #fffbe6 !important;
+  border: 1px solid #ffe58f !important;
+  color: #856404;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* 링크 스타일 (왼쪽 파란 선) */
+.card-link {
+  color: #1890ff !important;
+  text-decoration: none;
+  border-left: 3px solid #1890ff;
+  padding-left: 10px;
+  margin: 15px 0;
+  font-size: 0.9rem;
+  display: block;
+}
+
+/* 6. 이미지 설정 */
+.archive__item-teaser img {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  width: 100% !important;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* 모바일 반응형 조절 */
+@media (max-width: 768px) {
+  .archive__grid {
+    grid-template-columns: 1fr !important; /* 모바일은 무조건 1열 */
+    padding: 0 20px;
+  }
+}
