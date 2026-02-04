@@ -143,25 +143,25 @@ author:
 
 # Site Footer 사이트하단 수정
 footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      url: "http://github.com/lenn-dev"
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+  # links:
+  #   - label: "Twitter"
+  #     icon: "fab fa-fw fa-twitter-square"
+  #     # url:
+  #   - label: "Facebook"
+  #     icon: "fab fa-fw fa-facebook-square"
+  #     # url:
+  #   - label: "GitHub"
+  #     icon: "fab fa-fw fa-github"
+  #     # url:
+  #   - label: "GitLab"
+  #     icon: "fab fa-fw fa-gitlab"
+  #     url: "http://github.com/lenn-dev"
+  #   - label: "Bitbucket"
+  #     icon: "fab fa-fw fa-bitbucket"
+  #     # url:
+  #   - label: "Instagram"
+  #     icon: "fab fa-fw fa-instagram"
+  #     # url:
   since: "2023"
   copyright: "Copyright @ 2023 lenn-dev. All rights reserved."
 
@@ -331,7 +331,7 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: true
       share: true
@@ -344,7 +344,7 @@ defaults:
       type: pages
     values:
       layout: page #single -> page로 변경
-      author_profile: true
+      author_profile: false
       read_time: false
       comments: false
       share: false
@@ -352,6 +352,5 @@ defaults:
       
 
         
-# Custom CSS
-custom_css: "/assets/css/custom.css"
+
 
