@@ -1,0 +1,488 @@
+/* 1. 외부 폰트 및 기본 설정 */
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&display=swap');
+/* 아이콘을 불러오는 라이브러리입니다 */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  scroll-behavior: smooth; /* 네비게이션 클릭 시 부드러운 이동 */
+}
+
+/* 2. 헤더 및 네비게이션 */
+.masthead {
+  background: #ffffff !important; /* 배경을 화이트로 고정 */
+  border-bottom: 1px solid #f2f2f2 !important;
+  box-shadow: none !important;
+}
+
+.site-title {
+  color: #1a1a1a !important;
+  font-size: 2.0rem !important;
+  font-weight: 800;
+}
+
+.site-nav { background: #ffffff !important; }
+.nav__list .nav__item a { color: #444 !important; font-weight: 600; }
+.nav__item a:hover { color: #667eea !important; background: transparent !important; }
+
+/* --- 네비게이션(Masthead) 강제 적용 --- */
+/* 1. 상단 바 배경 및 높이 조절 */
+body .masthead {
+  position: fixed !important; /* 스크롤을 내려도 상단에 고정 */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* 다른 요소보다 위에 보이도록 설정 */
+  
+  background-color: transparent !important; /* 초기 상태는 투명하게 */
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-bottom: none !important;
+  transition: all 0.3s ease-in-out !important;
+  padding: all 0.3s ease-in-out !important; /* 부드러운 변화 효과 */
+}
+
+/* 스크롤 감지 시 적용될 스타일 (JavaScript와 연동) */
+.masthead.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important; /* 스크롤 내리면 흰색 배경 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important; /* 하단 그림자 추가 */
+  border-bottom: 1px solid #eee !important;
+  padding: 10px 0 !important; /* 바 높이를 살짝 줄여서 세련되게 */
+}
+
+/* 본문 겹침 방지*/
+/* 메인 Hero 영역(splash 레이아웃의 첫 부분)에 메뉴바 두께만큼 패딩을 줍니다 */
+.layout--splash .page__hero, 
+.layout--splash .page__content {
+  margin-top: 80px !important; /* 메뉴바 높이만큼 본문을 아래로 밀어줍니다 */
+}
+
+/* 만약 배경 이미지(Hero)가 메뉴바 뒤로 비쳐야 한다면 패딩 대신 아래 방식을 씁니다 */
+/* .layout--splash .page__hero { margin-top: 0; padding-top: 80px; } */
+
+/* 2. 왼쪽 사이트 제목 (Lenn Dev's Tech Blog) */
+body .site-title {
+  font-size: 1.5rem !important;
+  font-weight: 800 !important;
+  color: #1a1a1a !important;
+  text-transform: uppercase; /* 대문자로 깔끔하게 */
+  letter-spacing: -0.5px;
+}
+
+/* 사이트 타이틀 및 메뉴 글자색 강제 고정 */
+.site-title, .masthead__menu-item a {
+  background: none !important; /* 혹시나 들어간 배경색 제거 */
+  color: #1a1a1a !important; /* 초기 글자색 (배경이 밝을 경우) */
+  font-weight: 800 !important;
+}
+
+/* 호버 시 색상 변화 */
+.masthead__menu-item a:hover {
+  color: #ff4d4f !important;
+}
+
+/* 사이트 제목 폰트 및 호버 */
+.site-title {
+  color: #ffffff !important; /* 배경이 어두울 때 대비 */
+  transition: color 0.3s ease !important;
+  font-weight: 800 !important;
+  text-decoration: none !important;
+}
+
+/* 스크롤 시 글자색 변경 */
+.masthead.scrolled .site-title {
+  color: #1a1a1a !important;
+}
+
+/* 제목 호버 시 색상 변화 */
+.site-title:hover {
+  color: #ff4d4f !important; /* 포인트 컬러 */
+}
+
+
+/* 3. 우측 메뉴 리스트 정렬 */
+body .nav__list {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* 4. 메뉴 항목 스타일 (Home, About, Blog 등) */
+body .nav__item a {
+  font-size: 1.05rem !important;
+  font-weight: 900 !important;
+  color: #333 !important;
+  margin-left: 20px !important;
+  padding: 5px 10px !important;
+  transition: all 0.2s ease !important;
+  border-radius: 8px;
+}
+
+/* 5. 메뉴 호버(마우스 올렸을 때) 효과 */
+body .nav__item a:hover {
+  color: #ff4d4f !important; /* 최덕경 사이트 포인트 레드 */
+  background-color: #fff1f0 !important; /* 연한 핑크빛 배경 추가 */
+}
+
+/* 메뉴 폰트 및 호버 색상 강제 적용 */
+.masthead__menu-item a {
+  font-family: 'Pretendard', sans-serif !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  color: #333333 !important; /* 메뉴 글씨색 강제 지정 */
+}
+
+.masthead__menu-item a:hover {
+  color: #ff4d4f !important; /* 호버 시 빨간색 강조 */
+}
+
+/* 6. 검색 아이콘(돋보기) 색상 변경 */
+body .search-btn__toggle {
+  color: #333 !important;
+}
+
+/* 7. footer 배경색을 짙은 회색으로 변경 */
+.page__footer {
+  background-color: #1a1a1a !important; /* 짙은 배경색 */
+  color: #ffffff !important; /* 글자색 화이트 */
+  padding: 40px 0 !important;
+  margin-top: 0 !important;
+  border: none !important;
+}
+
+/* footer 불필요한 테마 정보(Follow, Feed 등) 숨기기 */
+.page__footer-follow,
+.page__footer-copyright + p {
+  display: none !important;
+}
+
+/* footer 카피라이트 텍스트 중앙 정렬 및 폰트 조절 */
+.page__footer-copyright {
+  text-align: center !important;
+  font-size: 0.9rem !important;
+  color: #888 !important;
+}
+
+/* 카피라이트 텍스트 내의 링크(Jekyll, Minimal Mistakes)만 골라서 숨기기 */
+.page__footer-copyright a {
+  display: none !important;
+}
+
+/* "Powered by" 텍스트가 포함된 전체 문장을 깔끔하게 정리 */
+.page__footer-copyright {
+  font-size: 0 !important; /* 전체를 숨기고 */
+}
+
+.page__footer-copyright::before {
+  content: "© 2023 - 2026 Lenn Dev's portfolio. All rights reserved."; /* 원하는 문구만 새로 삽입 */
+  font-size: 0.9rem !important;
+  color: #888;
+  display: block;
+  text-align: center;
+}
+
+/* 3. 섹션 레이아웃 및 제목 스타일 (추가) */
+
+/* Hero 섹션 전체 컨테이너 */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 화면 높이를 100% 꽉 채웁니다 */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* 부모 요소의 여백을 무시하고 화면 끝까지 확장 */
+  
+  /* 배경 이미지 설정 (이미지 경로를 본인의 경로로 수정하세요) */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('/assets/images/header-bg.png') no-repeat center center;
+  background-size: cover; /* 이미지가 잘리지 않게 꽉 채움 */
+  background-attachment: fixed; /* 스크롤 시 이미지는 고정되는 효과 (최덕경 스타일) */
+  
+  text-align: center;
+  color: #fff;
+  margin-top: -80px; /* 네비게이션 바와 겹치게 위로 올림 */
+  opacity: 1 !important; /* 투명도 완전 제거 */
+  color: #ffffff !important; /* 순백색 고정 */
+  /*text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* 배경과 분리되도록 그림자 추가 */
+
+}
+
+/* 글자 선명도 보정 */
+.hero-content * {
+  opacity: 1 !important;
+  color: #ffffff !important;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* 글자 뒤에 그림자를 주어 가독성 확보 */
+}
+
+/* 이름 강조 (- 최덕경 - 부분) */
+.hero-divider {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* 메인 타이틀 (프론트 엔드 개발자 포트폴리오) */
+.hero-title {
+  font-size: 4rem !important; /* 아주 크게 설정 */
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  margin-top: 10px !important;
+  margin: 20px 0;
+  letter-spacing: -1px;
+}
+
+/* 중간 주황색 구분선 */
+.hero-line {
+  width: 50px;
+  height: 4px;
+  background-color: #ff4d4f; /* 주황색 포인트 */
+  margin: 30px auto;
+}
+
+/* 소개 문구 */
+.hero-subtitle {
+  font-size: 1.4rem !important; 
+  line-height: 1.6;
+  font-weight: 400 !important;
+  margin-bottom: 40px;
+  color:rgba(255, 255, 255, 0.9) !important; /* 약간의 대비만 허용 */
+}
+
+/* 주황색 버튼 (더 알아보기) */
+.hero-btn {
+  display: inline-block;
+  background-color: #ff4d4f !important; /* 주황색 배경 */
+  color: #fff !important;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px; /* 둥근 버튼 */
+  text-decoration: none !important;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(255, 77, 79, 0.3);
+}
+
+.hero-btn:hover {
+  transform: scale(1.05); /* 마우스 올리면 살짝 커짐 */
+  background-color: #ff7875 !important;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem !important; }
+  .hero-divider { font-size: 1.2rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+}
+
+
+
+
+/* 본문 영역을 화면 꽉 차게 넓힙니다 */
+.layout--splash .page{
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+.custom-section {
+  display: block !important;
+  width: 100% !important;
+  clear: both;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.yellow-bg {
+  background-color: #f9c51d !important; /* SKILLS 섹션 전용 노란색 배경 */
+  max-width: 100% !important;
+  padding: 80px 0 !important;
+  margin: 50px 0 !important;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+
+/* 텍스트가 왼쪽으로 쏠리는 현상을 방지하기 위한 중앙 정렬 보정 */
+.custom-section .section-title {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important; /* inline-flex에서 변경 */
+  justify-content: center;
+  width: fit-content;
+}
+
+/* 4. ABOUT ME: 아이콘 및 그리드 배치 (추가) */
+.about-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* 3열 배치 */
+  gap: 40px !important;
+  text-align: left !important;
+  margin-top: 20px !important;
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-item i {
+  font-size: 2rem;
+  color: #333;
+  width: 40px;
+  text-align: center;
+}
+
+.about-content .label {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.about-content .value {
+  color: #444;
+  font-size: 1rem;
+  margin-top: 3px;
+}
+
+/* 5. SKILLS: 노란색 배경 속 화이트 카드 (추가) */
+.skills-card {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  margin-bottom: 35px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.skill-category:last-child { margin-bottom: 0; }
+
+.cat-title {
+  min-width: 160px;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* 스킬 태그 커스텀 컬러링 (추가) */
+.tag {
+  padding: 8px 16px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.tag.blue { background: #3178c6; }
+.tag.yellow { background: #f7df1e; color: black; }
+.tag.black { background: #000000; }
+.tag.purple { background: #764ba2; }
+.tag.sky { background: #06b6d4; }
+.tag.orange { background: #ff9900; }
+.tag.docker { background: #2496ed; }
+
+/* 6. PROJECTS: 전체적인 그리드 및 카드 스타일 (통합) */
+.archive__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)) !important;
+  grid-column-gap: 30px !important;
+  grid-row-gap: 30px !important;
+  max-width: 1200px;
+  margin: 40px auto !important;
+}
+
+.archive__item, .feature__item, .project-card {
+  background: #ffffff !important;
+  border: 1px solid #f0f0f0 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+  padding: 35px;
+  transition: all 0.3s ease !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: left;
+}
+
+.archive__item:hover, .project-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-tag {
+  background-color: #ff4d4f !important;
+  color: white !important;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.archive__item-title {
+  margin-top: 10px !important;
+  font-weight: 800;
+  font-size: 1.5rem !important;
+  color: #1a1a1a !important;
+}
+
+/* 7. 기타 요소 스타일 */
+.card-link {
+  color: #1890ff !important;
+  border-left: 3px solid #1890ff;
+  padding-left: 12px;
+  margin: 20px 0;
+  font-size: 0.95rem;
+}
+
+.card-skills span {
+  background-color: #fffbe6 !important;
+  border: 1px solid #ffe58f !important;
+  color: #856404;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* 8. 모바일 반응형 조절 */
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .archive__grid, .about-grid { grid-template-columns: 1fr !important; }
+  .skill-category { flex-direction: column; gap: 15px; }
+  .cat-title { min-width: unset; }
+  .custom-section { padding: 50px 20px; }
+  .skills-card { padding: 30px 20px; }
+}
