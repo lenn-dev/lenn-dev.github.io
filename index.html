@@ -1,13 +1,150 @@
 ---
-layout: home
-author_profile: true
-header:
-  #overlay_color: "#ffeae5"
-  #overlay_filter: "0.2"
-  #overlay_image: /assets/images/header-bg.png
-  #actions:
-  #  - label: "about"
-  #    url: "/about/"
-excerpt: "Machine Learning Engineer based in Melbourne"
+layout: splash
+author_profile: false # 원페이지 포트폴리오의 넓은 화면을 위해 false 권장
+#header:
+#  overlay_image: /assets/images/header-bg.png # 실제 이미지 경로로 수정하세요
+#  overlay_filter: 0.5
+#  excerpt: "안녕하세요.<br>본질에 집중하는 프론트엔드 개발자 <b>Lena</b>입니다."
+#  actions:
+#    - label: "더 알아보기 ↓"
+#      url: "#about-me"
 ---
 
+<div class="hero-container">
+  <div class="hero-content">
+    <p class="hero-divider">- <b>Lena</b> -</p>
+    <h1 class="hero-title">프론트 엔드 개발자 포트폴리오</h1>
+    <div class="hero-line"></div>
+    <p class="hero-subtitle">
+      안녕하세요.<br>
+      본질에 집중하는 프론트 엔드 개발자<br>
+      <b>Lena</b>입니다.
+    </p>
+    <a href="#about-me" class="hero-btn">더 알아보기 ↓</a>
+  </div>
+</div>
+
+<section id="about-me" class="custom-section">
+  <div class="section-title">
+    <span class="anchor-icon">🔗</span> ABOUT ME
+  </div>
+  
+  <div class="about-grid">
+    <div class="about-item">
+      <i class="fas fa-user"></i>
+      <div class="about-content">
+        <div class="label">이름</div>
+        <div class="value">Lena (본명입력)</div>
+      </div>
+    </div>
+    <div class="about-item">
+      <i class="fas fa-calendar"></i>
+      <div class="about-content">
+        <div class="label">생년월일</div>
+        <div class="value">9X.XX.XX</div>
+      </div>
+    </div>
+    <div class="about-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <div class="about-content">
+        <div class="label">위치</div>
+        <div class="value">서울특별시 XX구</div>
+      </div>
+    </div>
+    <div class="about-item">
+      <i class="fas fa-phone"></i>
+      <div class="about-content">
+        <div class="label">연락처</div>
+        <div class="value">010-XXXX-XXXX</div>
+      </div>
+    </div>
+    <div class="about-item">
+      <i class="fas fa-envelope"></i>
+      <div class="about-content">
+        <div class="label">이메일</div>
+        <div class="value">lenn-dev@example.com</div>
+      </div>
+    </div>
+    <div class="about-item">
+      <i class="fas fa-pencil-alt"></i>
+      <div class="about-content">
+        <div class="label">학력</div>
+        <div class="value">XX대학교 (컴퓨터공학부)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="custom-section yellow-bg">
+  <div class="section-title">
+    <span class="anchor-icon">🔗</span> SKILLS
+  </div>
+
+  <div class="skills-card">
+    <div class="skill-category">
+      <div class="cat-title">💻 Language</div>
+      <div class="skill-tags">
+        <span class="tag blue">TypeScript</span>
+        <span class="tag yellow">JavaScript</span>
+        <span class="tag black">Python</span>
+      </div>
+    </div>
+    
+    <div class="skill-category">
+      <div class="cat-title">🖼️ Frontend</div>
+      <div class="skill-tags">
+        <span class="tag black">Next.js / React</span>
+        <span class="tag purple">Zustand</span>
+        <span class="tag sky">Tailwind CSS</span>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="cat-title">⚙️ DevOps</div>
+      <div class="skill-tags">
+        <span class="tag orange">AWS</span>
+        <span class="tag docker">Docker</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="custom-section">
+  <div class="section-title">
+    <span class="anchor-icon">🔗</span> PROJECTS
+  </div>
+
+  <div class="archive__grid">
+    <div class="project-card">
+      <div class="card-tag">react-bulk-form</div>
+      <div class="archive__item-title">Form 상태 일괄 관리를 위한 라이브러리</div>
+      <div class="archive__item-excerpt">
+        <ul>
+          <li>필드 값 및 오류 일괄 관리</li>
+          <li>필드 단위 상태 추적</li>
+          <li>UX 구현을 배제하여 부가적인 인터페이스 최소화</li>
+        </ul>
+      </div>
+      <a href="https://www.npmjs.com/package/react-bulk-form" class="card-link">https://www.npmjs.com/package/react-bulk-form</a>
+      <div class="card-skills">
+        <span>TypeScript</span> <span>React</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="card-tag">IT 엘도라도 (블로그)</div>
+      <div class="archive__item-title">Notion API/DB와 연동하여 개발한 개인 블로그</div>
+      <div class="archive__item-excerpt">
+        <ul>
+          <li>티스토리 플랫폼의 불편함을 해소하고자 직접 개발</li>
+          <li>별도의 DB 없이 Notion API와 연동</li>
+          <li>무한 스크롤, 조회수 추적, 댓글 기능 개발</li>
+        </ul>
+      </div>
+      <a href="https://it-eldorado.com" class="card-link">https://it-eldorado.com</a>
+      <div class="card-skills">
+        <span>TypeScript</span> <span>Next.js</span> <span>Zustand</span> <span>Vercel</span>
+      </div>
+    </div>
+  </div>
+</section>

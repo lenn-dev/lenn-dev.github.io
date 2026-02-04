@@ -18,9 +18,9 @@ minimal_mistakes_skin    : "air" #"default", "air", "aqua", "contrast", "dark", 
 # Site Settings 사이트 기본정보
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Lenn Dev's Tech Blog"
+title                    : "Lenn Dev's portfolio"
 title_separator          : "|"
-subtitle                 : "Learning & Development Journey" # site tagline that appears below site title in masthead
+subtitle                 : #"Learning & Development Journey" # site tagline that appears below site title in masthead
 name                     : "Lena Kwon"
 description              : "A technical blog documenting my learning experience."
 url                      : "https://lenn-dev.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"

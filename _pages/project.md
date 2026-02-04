@@ -1,10 +1,32 @@
 ---
 title: "Projects"
-layout: page  # single → page로 변경
+layout: splash  # single → page로 변경
 permalink: /projects/
 author_profile: true
 pagination: false
 ---
+
+<div class="archive__grid">
+  <div class="project-card">
+    <div class="card-tag">react-bulk-form</div>
+    <div class="archive__item-title">Form 상태 일괄 관리를 위한 라이브러리</div>
+    <div class="archive__item-excerpt">
+      <ul>
+        <li>필드 값 및 오류 일괄 관리</li>
+        <li>필드 단위 상태 추적</li>
+      </ul>
+    </div>
+    <a href="#" class="card-link">https://www.npmjs.com/...</a>
+    <div class="card-skills">
+      <span>TypeScript</span> <span>React</span>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <div class="card-tag">IT 엘도라도</div>
+    ...
+  </div>
+</div>
 
 ## 🚀 My Projects
 
@@ -18,9 +40,9 @@ pagination: false
 
 ---
 
-<div class="entries-list">
+<!-- <div class="entries-list">
 {% assign project_posts = site.categories['Projects'] %}
 {% for post in project_posts %}
   {% include archive-single.html type="grid" %}
 {% endfor %}
-</div>
+</div> -->
