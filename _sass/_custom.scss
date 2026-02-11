@@ -384,20 +384,20 @@ body .search-btn__toggle {
   color: #1a1a1a;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
 }
 
 /*skill 간격*/
-.skill-row {
-    display: flex;
-    align-items: center; /* 아이콘, 텍스트, 태그의 높이 중앙 정렬 */
-    margin-bottom: 20px; /* 행 간격 */
-}
+// .skill-row {
+//     display: flex;
+//     align-items: center; /* 아이콘, 텍스트, 태그의 높이 중앙 정렬 */
+//     margin-bottom: 20px; /* 행 간격 */
+// }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 20px;
 }
 
 /* 스킬 태그 커스텀 컬러링 (추가) */
