@@ -1,13 +1,13 @@
 # 상단 메뉴 (기존)
 main:
   - title: "Home"
-    url: /
+    url: /#home
   - title: "About"
-    url: /about/
-  - title: "Blog"
-    url: /blog/
+    url: /#about
+  - title: "Skills"
+    url: /#skills
   - title: "Projects"
-    url: /projects/
+    url: /#projects
 
 
 # 왼쪽 사이드바 메뉴 (필요하면 유지, 아니면 삭제)
