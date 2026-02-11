@@ -378,13 +378,20 @@ body .search-btn__toggle {
 .skill-category:last-child { margin-bottom: 0; }
 
 .cat-title {
-  min-width: 160px;
-  font-weight: 800;
+  min-width: 250px;
+  font-weight: bold;
   font-size: 1.3rem;
   color: #1a1a1a;
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+/*skill 간격*/
+.skill-row {
+    display: flex;
+    align-items: center; /* 아이콘, 텍스트, 태그의 높이 중앙 정렬 */
+    margin-bottom: 20px; /* 행 간격 */
 }
 
 .skill-tags {
@@ -394,6 +401,12 @@ body .search-btn__toggle {
 }
 
 /* 스킬 태그 커스텀 컬러링 (추가) */
+.tag-container {
+    display: flex;
+    gap: 10px; /* 태그 사이의 간격 */
+    flex-wrap: wrap; /* 태그가 많아지면 다음 줄로 넘김 */
+}
+
 .tag {
   padding: 8px 16px;
   border-radius: 12px;
