@@ -379,20 +379,13 @@ body .search-btn__toggle {
 
 .cat-title {
   min-width: 250px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.3rem;
   color: #1a1a1a;
   display: flex;
   align-items: center;
   gap: 5px;
 }
-
-/*skill 간격*/
-// .skill-row {
-//     display: flex;
-//     align-items: center; /* 아이콘, 텍스트, 태그의 높이 중앙 정렬 */
-//     margin-bottom: 20px; /* 행 간격 */
-// }
 
 .skill-tags {
   display: flex;
